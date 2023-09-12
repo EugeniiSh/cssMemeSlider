@@ -18,13 +18,78 @@
     margin: auto;
 }
 
+.controls-button
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons-radio
+{
+    width: 3vw;
+    height: 3vh;
+}
+
+#radio1:checked ~ .slaider > .item1,
+#radio2:checked ~ .slaider > .item2,
+#radio3:checked ~ .slaider > .item3,
+#radio4:checked ~ .slaider > .item4
+{
+    display: block;
+}
+
+#radio1:checked ~ .controls-text > .text1,
+#radio2:checked ~ .controls-text > .text2,
+#radio3:checked ~ .controls-text > .text3,
+#radio4:checked ~ .controls-text > .text4
+{
+    display: block;
+}
+
+.controls-text
+{
+    margin-right: auto;
+    order: -1;
+}
+
+.text-items
+{
+    display: none;
+}
+
 .slaider
 {
     height: 70vh;
+    width: 100%;
     padding-top: 5%;
+    order: -2;
 }
 
-.slider-items > img
+.slider-items
 {
-    margin: auto;
+    display: none;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.item1
+{
+    background-image: url(assets/img/getit.jpg);
+}
+
+.item2
+{
+    background-image: url(assets/img/wtf.jpg);
+}
+
+.item3
+{
+    background-image: url(assets/img/nothx.jpg);
+}
+
+.item4
+{
+    background-image: url(assets/img/formr.jpg);
 }
