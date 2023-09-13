@@ -26,14 +26,45 @@
 
 .buttons-radio
 {
-    width: 3vw;
+    width: 3vh;
     height: 3vh;
+    padding: 1vh;
+    margin: 1vh;
+
+    appearance: none;
+    background-color: #a9b4b9;
+    border: 0.5vh solid #a9b4b9;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
 }
+
+.buttons-radio:hover
+{
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.buttons-radio:checked
+{
+    background-color: #666c70;
+}
+
+/* input[type="radio"]
+{
+    background-color: aqua;
+    cursor: pointer;
+    color: antiquewhite;
+    border-color: blue;
+    border-radius: 50%;
+} */
 
 #radio1:checked ~ .slaider > .item1,
 #radio2:checked ~ .slaider > .item2,
 #radio3:checked ~ .slaider > .item3,
-#radio4:checked ~ .slaider > .item4
+#radio4:checked ~ .slaider > .item4,
+#radio5:checked ~ .slaider > .item5,
+#radio6:checked ~ .slaider > .item6
 {
     display: block;
 }
@@ -41,7 +72,9 @@
 #radio1:checked ~ .controls-text > .text1,
 #radio2:checked ~ .controls-text > .text2,
 #radio3:checked ~ .controls-text > .text3,
-#radio4:checked ~ .controls-text > .text4
+#radio4:checked ~ .controls-text > .text4,
+#radio5:checked ~ .controls-text > .text5,
+#radio6:checked ~ .controls-text > .text6
 {
     display: block;
 }
@@ -50,6 +83,9 @@
 {
     margin-right: auto;
     order: -1;
+
+    font-size: 3rem;
+    color: azure;
 }
 
 .text-items
@@ -61,8 +97,10 @@
 {
     height: 70vh;
     width: 100%;
+    margin-bottom: 5vh;
     padding-top: 5%;
     order: -2;
+    transition: 0.3s;
 }
 
 .slider-items
@@ -86,10 +124,35 @@
 
 .item3
 {
-    background-image: url(assets/img/nothx.jpg);
+    background-image: url(assets/img/itsnotour.gif);
 }
 
 .item4
 {
     background-image: url(assets/img/formr.jpg);
+}
+
+.item5
+{
+    background-image: url(assets/img/nothx.jpg);
+}
+
+.item6
+{
+    background-image: url(assets/img/imagination.jpg);
+}
+
+
+
+@media (max-width: 768px)
+{
+    .controls-text
+    {
+        order: 0;
+    }
+
+    .buttons-radio
+    {
+        order: -1;
+    }
 }
